@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import colors from './assets/colors'
+import Home from './screens/Home';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles().bodyContainer} className="App">
+      <BrowserRouter>
+        {/* <div>
+          <Route render={({ location }) => {
+              return location.pathname.indexOf('/admin') === -1 ? <Header/> : null 
+            }} />
+        </div> */}
+          <Routes>
+            <Route path='/' element={<Home />} />
+            {/* <Route path={['/admin', '/admin-student', '/admin-career', '/admin-recruitment', '/admin-partner']}>
+              <Admin/>
+            </Route>
+            <Route path={["/home", "/pricing", "/payment", "/on-boarding", "/home-subscribed", "/lesson"]}>
+              <Top/>
+            </Route>
+            <Route path={["/login", "/register", "/payment-info"]}>
+              <OnBoarding/>
+            </Route> */}
+          </Routes>
+      </BrowserRouter>
     </div>
-  );
+  )
+  
 }
+
+const styles = () => ({
+  bodyContainer: {
+    display: 'block',
+    padding: 0,
+    backgroundColor: colors.white,
+    width: '100%',
+    height: '100vh',
+  }
+})
+
 
 export default App;
