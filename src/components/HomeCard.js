@@ -1,25 +1,24 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faSearch, faFire, faBookmark } from '@fortawesome/free-solid-svg-icons'
-import sample from '../assets/images/sample.jpg'
 
 import colors from '../assets/colors'
 
 const HomeCard = (props) => {
     return (
-        <div style={styles().container}>
+        <div style={styles(props.imgBg).container}>
             <span>{props.title}</span>
         </div>
     )
 }
 
-const styles = () => ({
+const styles = (imgBg) => ({
     container: {
         width: '90%',
         minWidth: 120,
         minHeight: 160,
         margin: 6,
-        backgroundImage: `url(${sample})`,
+        backgroundImage: `url(${imgBg})`,
         // height: '100%',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',

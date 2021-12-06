@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
 import colors from '../assets/colors'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -16,33 +15,10 @@ import telic from '../assets/images/telic.jpg'
 import tvto from '../assets/images/tvto.jpeg'
 import borleo from '../assets/images/borleo.jpeg'
 
-const Home = () => {
+const MusicPlayer = () => {
     return (
         <div>
-            <Header />
-            <div style={styles().containerHome}>
-                <div style={styles().titleContainer}>
-                    <span style={styles().homeText}>New Releases</span>
-                </div>
-            </div>
-            <div style={styles().carousel}>
-                <HomeCard imgBg={sample}/>
-                <HomeCard imgBg={sample2}/>
-                <HomeCard imgBg={sample3}/>
-                <HomeCard imgBg={sample4}/>
-                <HomeCard imgBg={sample}/>
-                <HomeCard imgBg={sample2}/>
-                <HomeCard imgBg={sample3}/>
-                <HomeCard imgBg={sample4}/>
-                <HomeCard imgBg={sample}/>
-            </div>
-            <div style={styles().subTitleContainer}>
-                <span style={styles().homeText2}>Trending</span>
-            </div>
-            <HomeArtistCard img={telic} name={'Laro'} artist={'Autotelic'}/>
-            <HomeArtistCard img={tvto} name={'Pasa'} artist={'The Vowels They Orbit'}/>
-            <HomeArtistCard img={borleo} name={'Pure Imagination'} artist={'John Borleo'}/>
-            <Footer />
+            <span></span>
         </div>
 
     )
@@ -103,4 +79,4 @@ const styles = () => ({
         fontWeight: 'bold'
     }
 })
-export default Home
+export default MusicPlayer

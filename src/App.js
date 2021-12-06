@@ -2,6 +2,10 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import colors from './assets/colors'
 import Home from './screens/Home';
+import MusicPlayer from './screens/MusicPlayer';
+import Wallet from './screens/Wallet';
+import WalletIntegrate from './screens/WalletIntegrate';
+import WalletNFT from './screens/WalletNFT';
 
 const App = () => {
   return (
@@ -14,6 +18,10 @@ const App = () => {
         </div> */}
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/music-player' element={<MusicPlayer />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/wallet-integrate" element={<WalletIntegrate />} />
+            <Route path="/wallet-nft" element={<WalletNFT />} />
             {/* <Route path={['/admin', '/admin-student', '/admin-career', '/admin-recruitment', '/admin-partner']}>
               <Admin/>
             </Route>
