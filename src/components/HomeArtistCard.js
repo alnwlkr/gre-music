@@ -1,13 +1,16 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faSearch, faFire, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 import colors from '../assets/colors'
 
 const HomeArtistCard = (props) => {
+    const navigate = useNavigate();
+
     return (
         <div style={styles().container}>
-            <div style={styles().rowContainer}>
+            <div style={styles().rowContainer} onClick={() => navigate("/artist-songs")}>
                 <div style={styles(props.img).profilePic} />
                 <div style={styles().textContainer}>
                     <span style={styles().nameText}>{props.name}</span>

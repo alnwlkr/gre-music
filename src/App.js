@@ -6,6 +6,7 @@ import MusicPlayer from './screens/MusicPlayer';
 import Wallet from './screens/Wallet';
 import WalletIntegrate from './screens/WalletIntegrate';
 import WalletNFT from './screens/WalletNFT';
+import ArtistSongs from "./screens/ArtistSongs";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/wallet-integrate" element={<WalletIntegrate />} />
             <Route path="/wallet-nft" element={<WalletNFT />} />
+            <Route path="/artist-songs" element={<ArtistSongs />} />
             {/* <Route path={['/admin', '/admin-student', '/admin-career', '/admin-recruitment', '/admin-partner']}>
               <Admin/>
             </Route>
